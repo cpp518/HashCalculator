@@ -1,14 +1,11 @@
-﻿生成启动时间为 2018/7/15 22:33:52。
+﻿生成启动时间为 2018/7/16 15:49:31。
      1>项目“D:\学习\VC编程\哈希计算器\HashCalclator\HashCalclator\HashCalclator.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\HashCalclator.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
-         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\HashCalclator.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt md5.cpp
-         md5.cpp
-     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\md5.cpp(63): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
-     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\md5.cpp(64): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
-     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\md5.cpp(65): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\HashCalclator.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt HashCalclator.cpp
+         HashCalclator.cpp
        ManifestResourceCompile:
          所有输出均为最新。
        Link:
@@ -29,4 +26,4 @@
 
 生成成功。
 
-已用时间 00:00:01.66
+已用时间 00:00:02.49
