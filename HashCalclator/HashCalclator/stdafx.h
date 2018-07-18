@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include "sha1.h"
 #include "md5.h"
 
 

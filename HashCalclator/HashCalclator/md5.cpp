@@ -48,8 +48,11 @@ md5::md5(char* fileName)
 	}
 	else{
 		DWORD size = GetFileSize(file,NULL);
-
-		this->buffer = new BYTE[size*64];
+		DWORD tempSize = size;
+		while(tempSize%64!=0){
+			tempSize++;
+		}
+		this->buffer = new BYTE[tempSize];
 		this->realSize = new DWORD;
 		this->Size = new DWORD;
 		this->result = new DWORD[4];
@@ -102,15 +105,17 @@ md5::md5(char* fileName)
 		printf("%02X",*(((BYTE*)&md5::A)+i));
 	}
 	printf("\n");
+	CloseHandle(file);
 }
 
 
 md5::~md5(void)
 {
-	delete[] buffer;
-	delete[] result;
-	delete realSize;
-	delete Size;
+	delete[] this->buffer;
+	delete[] this->result;
+	delete[] this->M;
+	delete this->realSize;
+	delete this->Size;
 }
 
 void md5::FillMessage(){

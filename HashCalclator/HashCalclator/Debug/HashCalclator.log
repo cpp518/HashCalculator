@@ -1,17 +1,26 @@
-﻿生成启动时间为 2018/7/16 15:49:31。
+﻿生成启动时间为 2018/7/18 16:44:37。
      1>项目“D:\学习\VC编程\哈希计算器\HashCalclator\HashCalclator\HashCalclator.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\HashCalclator.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
-         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\HashCalclator.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt HashCalclator.cpp
-         HashCalclator.cpp
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\HashCalclator.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt md5.cpp sha1.cpp
+         sha1.cpp
+     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\sha1.cpp(117): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
+     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\sha1.cpp(118): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
+     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\sha1.cpp(119): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
+         md5.cpp
+     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\md5.cpp(130): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
+     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\md5.cpp(131): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
+     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\md5.cpp(132): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
+         正在生成代码...
        ManifestResourceCompile:
          所有输出均为最新。
        Link:
          d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\学习\VC编程\哈希计算器\HashCalclator\Debug\HashCalclator.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\HashCalclator.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\学习\VC编程\哈希计算器\HashCalclator\Debug\HashCalclator.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\学习\VC编程\哈希计算器\HashCalclator\Debug\HashCalclator.lib" /MACHINE:X86 Debug\HashCalclator.exe.embed.manifest.res
          Debug\HashCalclator.obj
          Debug\md5.obj
+         Debug\sha1.obj
          Debug\stdafx.obj
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\HashCalclator.exe.embed.manifest" /manifest Debug\HashCalclator.exe.intermediate.manifest
@@ -26,4 +35,4 @@
 
 生成成功。
 
-已用时间 00:00:02.49
+已用时间 00:00:02.40
