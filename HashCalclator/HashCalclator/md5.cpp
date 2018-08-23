@@ -44,9 +44,11 @@ md5::md5(char* fileName)
 
 	if(GetLastError() != 0){
 		printf("打开文件失败\n");
+		this->open = false;
 		
 	}
 	else{
+		this->open = true;
 		DWORD size = GetFileSize(file,NULL);
 		DWORD tempSize = size;
 		while(tempSize%64!=0){
@@ -99,23 +101,26 @@ md5::md5(char* fileName)
 			md5::C = this->result[2] + md5::C;
 			md5::D = this->result[3] + md5::D;
 		}
+		for(DWORD i = 0;i<16;i++){
+			printf("%02X",*(((BYTE*)&md5::A)+i));
+		}
+		printf("\n");
+		CloseHandle(file);
 
 	}
-	for(DWORD i = 0;i<16;i++){
-		printf("%02X",*(((BYTE*)&md5::A)+i));
-	}
-	printf("\n");
-	CloseHandle(file);
+	
 }
 
 
 md5::~md5(void)
 {
-	delete[] this->buffer;
-	delete[] this->result;
-	delete[] this->M;
-	delete this->realSize;
-	delete this->Size;
+	if(this->open){
+		delete[] this->buffer;
+		delete[] this->result;
+		delete[] this->M;
+		delete this->realSize;
+		delete this->Size;
+	}
 }
 
 void md5::FillMessage(){

@@ -21,12 +21,12 @@ sha1::sha1(char * fileName)
 
 	if(GetLastError() != 0){
 		printf("打开文件失败\n");
-		
+		this->open = false;
 	}
 	else{
 		DWORD size = GetFileSize(file,NULL);
 
-		
+		this->open = true;
 		this->realSize = new DWORD;
 		this->Size = new DWORD;
 		DWORD tempSize = size;
@@ -85,7 +85,6 @@ sha1::sha1(char * fileName)
 		/*for(DWORD i = 0;i<20;i++){
 			printf("%02X",*(((BYTE*)&sha1::A)+i));
 		}*/
-		printf("\n");
 		CloseHandle(file);
 	}
 }
@@ -93,12 +92,13 @@ sha1::sha1(char * fileName)
 
 sha1::~sha1(void)
 {
-	delete[] this->buffer;
-	delete[] this->M;
-	delete[] this->result;
-	delete this->realSize;
-	delete this->Size;
-	
+	if(this->open){
+		delete[] this->buffer;
+		delete[] this->M;
+		delete[] this->result;
+		delete this->realSize;
+		delete this->Size;
+	}
 }
 
 

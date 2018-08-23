@@ -10,7 +10,7 @@ public:
 
 private: 
 	char* fileName;
-
+	bool open;
 	BYTE *buffer; //这里是内容保存位置
 	DWORD *realSize; //实际读入的文件大小
 	DWORD *result;  //结果保存位置
