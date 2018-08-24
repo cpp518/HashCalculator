@@ -1,28 +1,17 @@
-﻿生成启动时间为 2018/8/23 18:30:23。
+﻿生成启动时间为 2018/8/24 19:36:14。
      1>项目“D:\学习\VC编程\哈希计算器\HashCalclator\HashCalclator\HashCalclator.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\HashCalclator.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\HashCalclator.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\HashCalclator.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt HashCalclator.cpp crc32.cpp md5.cpp sha1.cpp
-         sha1.cpp
-     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\sha1.cpp(117): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
-     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\sha1.cpp(118): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
-     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\sha1.cpp(119): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
-         md5.cpp
-     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\md5.cpp(135): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
-     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\md5.cpp(136): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
-     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\md5.cpp(137): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
-         crc32.cpp
-     1>d:\学习\vc编程\哈希计算器\hashcalclator\hashcalclator\crc32.cpp(53): warning C4018: “<”: 有符号/无符号不匹配
+         所有输出均为最新。
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\HashCalclator.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt HashCalclator.cpp
          HashCalclator.cpp
-         正在生成代码...
        ManifestResourceCompile:
          所有输出均为最新。
        Link:
          d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\学习\VC编程\哈希计算器\HashCalclator\Debug\HashCalclator.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\HashCalclator.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\学习\VC编程\哈希计算器\HashCalclator\Debug\HashCalclator.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\学习\VC编程\哈希计算器\HashCalclator\Debug\HashCalclator.lib" /MACHINE:X86 Debug\HashCalclator.exe.embed.manifest.res
          Debug\crc32.obj
+         Debug\file.obj
          Debug\HashCalclator.obj
          Debug\md5.obj
          Debug\sha1.obj
@@ -40,4 +29,4 @@
 
 生成成功。
 
-已用时间 00:00:13.99
+已用时间 00:00:04.47

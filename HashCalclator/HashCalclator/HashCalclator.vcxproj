@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="crc32.h" />
+    <ClInclude Include="file.h" />
     <ClInclude Include="md5.h" />
     <ClInclude Include="sha1.h" />
     <ClInclude Include="stdafx.h" />
@@ -83,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="crc32.cpp" />
+    <ClCompile Include="file.cpp" />
     <ClCompile Include="HashCalclator.cpp" />
     <ClCompile Include="md5.cpp" />
     <ClCompile Include="sha1.cpp" />

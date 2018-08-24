@@ -4,13 +4,12 @@ class md5
 {
 public:
 	
-	md5(char* fileName);
+	md5(HANDLE ,DWORD);
 
 	~md5(void);
 
 private: 
-	char* fileName;
-	bool open;
+
 	BYTE *buffer; //这里是内容保存位置
 	DWORD *realSize; //实际读入的文件大小
 	DWORD *result;  //结果保存位置
@@ -24,6 +23,7 @@ private:
 	static DWORD T[64];		//常数值
 	static DWORD s[64];		//左移的位数
 	static DWORD m[64];		//每次处理的分段顺序
+
 
 	void FillMessage() ; //填充信息，使得内容满足要求
 	void ShowMessage() ; //输出信息，看看有没有错

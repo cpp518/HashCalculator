@@ -7,6 +7,7 @@ DWORD md5::B = 0xEFCDAB89;
 DWORD md5::C = 0x98BADCFE;
 DWORD md5::D = 0x10325476;
 
+
 DWORD md5::T[64] = {
 	0xD76AA478,0xE8C7B756,0x242070DB,0xC1BDCEEE,0xF57C0FAF,0x4787C62A,0xA8304613,0xFD469501,
 	0x698098D8,0x8B44F7AF,0xFFFF5BB1,0x895CD7BE,0x6B901122,0xFD987193,0xA679438E,0x49B40821,
@@ -32,36 +33,22 @@ DWORD md5::m[64]={
 	0,7,14,5,12,3,10,1,8,15,6,13,4,11,2,9
 };
 
-md5::md5(char* fileName)
+md5::md5(HANDLE file,DWORD size)
 {
-	HANDLE file = CreateFileA(
-		fileName,
-		GENERIC_READ,
-		FILE_SHARE_DELETE|FILE_SHARE_READ|FILE_SHARE_WRITE,
-		0,
-		OPEN_EXISTING,
-		0,0);
-
-	if(GetLastError() != 0){
-		printf("打开文件失败\n");
-		this->open = false;
 		
-	}
-	else{
-		this->open = true;
-		DWORD size = GetFileSize(file,NULL);
-		DWORD tempSize = size;
+		DWORD tempSize = size+10;
 		while(tempSize%64!=0){
 			tempSize++;
 		}
-		this->buffer = new BYTE[tempSize];
+		this->buffer = new BYTE[tempSize+1];
+		
 		this->realSize = new DWORD;
 		this->Size = new DWORD;
 		this->result = new DWORD[4];
 		this->M = new DWORD[16];
 		ReadFile(file,buffer,size,realSize,NULL);
 		this->FillMessage();
-		//this->ShowMessage();
+//		this->ShowMessage();
 		
 		for(DWORD i = 0;i<(*(this->Size) / 64);i++){	//每一次处理64字节（512位）
 			this->result[0] = md5::A;
@@ -105,22 +92,22 @@ md5::md5(char* fileName)
 			printf("%02X",*(((BYTE*)&md5::A)+i));
 		}
 		printf("\n");
-		CloseHandle(file);
-
-	}
+		
+		file = NULL;
+	
 	
 }
 
 
 md5::~md5(void)
 {
-	if(this->open){
+	
 		delete[] this->buffer;
 		delete[] this->result;
 		delete[] this->M;
 		delete this->realSize;
 		delete this->Size;
-	}
+	
 }
 
 void md5::FillMessage(){

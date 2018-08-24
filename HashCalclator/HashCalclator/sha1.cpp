@@ -7,29 +7,17 @@ DWORD sha1::C = 0x98BADCFE;
 DWORD sha1::D = 0x10325476;
 DWORD sha1::E = 0xC3D2E1F0;
 
+
 DWORD sha1::k[4] = {0x5A827999,0x6ED9EBA1,0x8F1BBCDC,0xCA62C1D6};
 
-sha1::sha1(char * fileName)
+sha1::sha1(HANDLE file,DWORD size)
 {
-	HANDLE file = CreateFileA(
-		fileName,
-		GENERIC_READ,
-		FILE_SHARE_DELETE|FILE_SHARE_READ|FILE_SHARE_WRITE,
-		0,
-		OPEN_EXISTING,
-		0,0);
-
-	if(GetLastError() != 0){
-		printf("打开文件失败\n");
-		this->open = false;
-	}
-	else{
-		DWORD size = GetFileSize(file,NULL);
-
-		this->open = true;
+	
+		
+		SetFilePointer(file,0,0,0);
 		this->realSize = new DWORD;
 		this->Size = new DWORD;
-		DWORD tempSize = size;
+		DWORD tempSize = size+10; //注意这里是否存在数组越界，当文件大小刚刚好0 mod 64的时候不会填充0导致数组访问时越界
 		while(tempSize%64!=0){
 			tempSize++;
 		}
@@ -85,20 +73,19 @@ sha1::sha1(char * fileName)
 		/*for(DWORD i = 0;i<20;i++){
 			printf("%02X",*(((BYTE*)&sha1::A)+i));
 		}*/
-		CloseHandle(file);
-	}
+	
 }
 
 
 sha1::~sha1(void)
 {
-	if(this->open){
+	
 		delete[] this->buffer;
 		delete[] this->M;
 		delete[] this->result;
 		delete this->realSize;
 		delete this->Size;
-	}
+	
 }
 
 

@@ -3,7 +3,7 @@
 class sha1
 {
 public:
-	sha1(char * fileName);
+	sha1(HANDLE,DWORD);
 	~sha1(void);
 
 private:
@@ -14,12 +14,13 @@ private:
 	static DWORD E;
 	static DWORD k[4];
 
+
 	DWORD *realSize;
 	DWORD *Size;
 	DWORD *result;
 	DWORD *M;
 	BYTE  *buffer;
-	bool open;
+	
 	
 	void FillMessage() ; //填充信息，使得内容满足要求
 	void ShowMessage() ; //输出信息，看看有没有错

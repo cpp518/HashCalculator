@@ -5,6 +5,7 @@ DWORD crc32::ploy = 0xEDB88320;
 DWORD crc32::initValue = 0xFFFFFFFF;
 DWORD crc32::endValue = 0xFFFFFFFF;
 
+
 crc32::crc32(void){}
 
 void crc32::init(){
@@ -27,25 +28,11 @@ void crc32::calc(){
 
 }
 
-crc32::crc32(char* fileName)
+crc32::crc32(HANDLE file,DWORD size)
 {
-	HANDLE file = CreateFileA(
-		fileName,
-		GENERIC_READ,
-		FILE_SHARE_DELETE|FILE_SHARE_READ|FILE_SHARE_WRITE,
-		0,
-		OPEN_EXISTING,
-		0,0);
-
-	if(GetLastError() != 0){
-		printf("打开文件失败\n");
-		this->open = false;
-	}
-	else{
-		this->open = true;
+		DWORD k = SetFilePointer(file,0,0,0);
 		this->crc32_table = new DWORD[256];
 		crc32::init();
-		DWORD size = GetFileSize(file,NULL);
 		this->realSize = new DWORD;
 		this->buffer = new BYTE[size+10];
 		ReadFile(file,buffer,size,realSize,NULL);
@@ -57,16 +44,16 @@ crc32::crc32(char* fileName)
 		remain = remain^endValue;
 		printf("%X\n",remain);
 		CloseHandle(file);
-	}
+	
 }
 
 
 
 crc32::~crc32(void)
 {
-	if(this->open){
+	/*
 		delete this->crc32_table;
 		delete this->buffer;
 		delete this->realSize; 
-	}
+	*/
 }

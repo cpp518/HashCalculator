@@ -3,7 +3,7 @@ class crc32
 {
 public:
 	crc32(void);
-	crc32(char* fileName);
+	crc32(HANDLE,DWORD);
 	~crc32(void);
 
 	
@@ -14,11 +14,11 @@ private:
 	static DWORD ploy;
 	static DWORD initValue;
 	static DWORD endValue;
-	
+
 	BYTE *buffer;
 	DWORD *realSize;
 	DWORD *crc32_table;
 	
-	bool open;
+	
 };
 
