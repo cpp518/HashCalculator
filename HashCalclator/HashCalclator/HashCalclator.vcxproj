@@ -75,6 +75,7 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="base64.h" />
     <ClInclude Include="crc32.h" />
     <ClInclude Include="file.h" />
     <ClInclude Include="md5.h" />
@@ -83,6 +84,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="base64.cpp" />
     <ClCompile Include="crc32.cpp" />
     <ClCompile Include="file.cpp" />
     <ClCompile Include="HashCalclator.cpp" />

@@ -1,16 +1,14 @@
-﻿生成启动时间为 2018/8/24 19:38:03。
+﻿生成启动时间为 2018/8/27 12:25:50。
      1>项目“D:\学习\VC编程\哈希计算器\HashCalclator\HashCalclator\HashCalclator.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Release\HashCalclator.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
-         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\HashCalclator.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt sha1.cpp
-         sha1.cpp
-     1>sha1.cpp(104): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
-     1>sha1.cpp(105): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
-     1>sha1.cpp(106): warning C4244: “=”: 从“DWORD”转换到“BYTE”，可能丢失数据
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\HashCalclator.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt HashCalclator.cpp
+         HashCalclator.cpp
        Link:
-         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\学习\VC编程\哈希计算器\HashCalclator\Release\HashCalclator.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\HashCalclator.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\学习\VC编程\哈希计算器\HashCalclator\Release\HashCalclator.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\学习\VC编程\哈希计算器\HashCalclator\Release\HashCalclator.lib" /MACHINE:X86 Release\crc32.obj
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\学习\VC编程\哈希计算器\HashCalclator\Release\HashCalclator.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\HashCalclator.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\学习\VC编程\哈希计算器\HashCalclator\Release\HashCalclator.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\学习\VC编程\哈希计算器\HashCalclator\Release\HashCalclator.lib" /MACHINE:X86 Release\base64.obj
+         Release\crc32.obj
          Release\file.obj
          Release\HashCalclator.obj
          Release\md5.obj
@@ -28,4 +26,4 @@
 
 生成成功。
 
-已用时间 00:00:02.94
+已用时间 00:00:03.99

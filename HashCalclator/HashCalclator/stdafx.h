@@ -9,9 +9,11 @@
 
 #include <stdio.h>
 #include <tchar.h>
+
 #include "sha1.h"
 #include "md5.h"
 #include "crc32.h"
+#include "base64.h"
 #include "file.h"
 
 // TODO: 在此处引用程序需要的其他头文件
